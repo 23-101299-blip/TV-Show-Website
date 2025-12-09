@@ -27,3 +27,14 @@ function logout() {
 }
 
 loadPersonalProfile();
+
+function handleNavbarScroll() {
+    let navbar = document.getElementById("navbar");
+    if (!navbar) return;
+    if (window.scrollY > 100) {
+        navbar.className = "navbar scrolled";
+    } else {
+        navbar.className = "navbar";
+    }
+}
+window.addEventListener("scroll", handleNavbarScroll);

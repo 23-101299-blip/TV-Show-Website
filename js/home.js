@@ -51,7 +51,7 @@ let quotes = [
 ];
 
 let merch = [
-    { id: 1, name: "Stranger Things T-Shirt", price: 25 },
+    { id: 1, name: "Stranger Cap", price: 25 },
     { id: 2, name: "Demogorgon Mug", price: 15 },
     { id: 3, name: "Upside Down Poster", price: 20 },
     { id: 4, name: "Eleven Funko Pop", price: 30 }
