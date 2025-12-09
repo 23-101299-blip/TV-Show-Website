@@ -12,8 +12,8 @@ function login(event) {
 
     if (email == "student@eui.edu.eg" && password == "123456") {
         let user = {
-            name: "Student",
-            email: email
+            name: "Ali Gameel",
+            email: "Netflixer"
         };
 
         localStorage.setItem("user", JSON.stringify(user));

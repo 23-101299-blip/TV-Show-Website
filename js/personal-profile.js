@@ -18,7 +18,10 @@ function loadPersonalProfile() {
     document.getElementById("profile-email").innerHTML = user.email;
 
     let initials = user.name.charAt(0);
-    document.getElementById("user-initials").innerHTML = initials;
+    let initialsEl = document.getElementById("user-initials");
+    if (initialsEl) {
+        initialsEl.innerHTML = initials;
+    }
 }
 
 function logout() {
