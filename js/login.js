@@ -17,7 +17,7 @@ function login(event) {
         };
 
         localStorage.setItem("user", JSON.stringify(user));
-        window.location = "profile.html";
+        window.location = "personal-profile.html";
     } else {
         document.getElementById("error-message").innerHTML = "Invalid email or password!";
     }
