@@ -50,6 +50,21 @@ let quotes = [
     { text: "Why are you keeping this curiosity door locked?", character: "Dustin" }
 ];
 
+let merch = [
+    { id: 1, name: "Stranger Things T-Shirt", price: 25 },
+    { id: 2, name: "Demogorgon Mug", price: 15 },
+    { id: 3, name: "Upside Down Poster", price: 20 },
+    { id: 4, name: "Eleven Funko Pop", price: 30 }
+];
+
+let cart = [];
+
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        document.getElementById("preloader").style.display = "none";
+    }, 3000);
+});
+
 function scrollToSection(sectionId) {
     let element = document.getElementById(sectionId);
     if (element) {
@@ -88,6 +103,88 @@ function renderCharacters() {
     }
 }
 
+function renderMerch() {
+    let container = document.getElementById("merch-container");
+    container.innerHTML = "";
+
+    for (let i = 0; i < merch.length; i++) {
+        container.innerHTML += `
+            <div class="merch-card">
+                <h3 class="merch-name">${merch[i].name}</h3>
+                <p class="merch-price">$${merch[i].price}</p>
+                <button onclick="addToCart(${merch[i].id})" class="add-btn">+</button>
+            </div>
+        `;
+    }
+}
+
+function addToCart(productId) {
+    let cartData = localStorage.getItem("cart");
+
+    if (cartData) {
+        cart = JSON.parse(cartData);
+    }
+
+    let product = null;
+    for (let i = 0; i < merch.length; i++) {
+        if (merch[i].id == productId) {
+            product = merch[i];
+        }
+    }
+
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+function removeFromCart(productId) {
+    let cartData = localStorage.getItem("cart");
+
+    if (cartData) {
+        cart = JSON.parse(cartData);
+    }
+
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id == productId) {
+            cart.splice(i, 1);
+            break;
+        }
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+function renderCart() {
+    let cartData = localStorage.getItem("cart");
+
+    if (cartData) {
+        cart = JSON.parse(cartData);
+    }
+
+    let container = document.getElementById("cart-items");
+    let message = document.getElementById("cart-message");
+
+    if (cart.length == 0) {
+        container.innerHTML = "";
+        message.innerHTML = "Cart is empty";
+        return;
+    }
+
+    message.innerHTML = "";
+    container.innerHTML = "";
+
+    for (let i = 0; i < cart.length; i++) {
+        container.innerHTML += `
+            <div class="cart-item">
+                <span class="cart-item-name">${cart[i].name}</span>
+                <span class="cart-item-price">$${cart[i].price}</span>
+                <button onclick="removeFromCart(${cart[i].id})" class="remove-btn">Remove</button>
+            </div>
+        `;
+    }
+}
+
 function handleNavbarScroll() {
     let navbar = document.getElementById("navbar");
 
@@ -103,3 +200,5 @@ window.onscroll = function () {
 };
 
 renderCharacters();
+renderMerch();
+renderCart();
