@@ -1,3 +1,9 @@
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        document.getElementById("preloader").style.display = "none";
+    }, 3000);
+});
+
 function loadCharacter() {
     let selectedId = localStorage.getItem("selectedCharacter");
     let charactersData = JSON.parse(localStorage.getItem("charactersData"));
