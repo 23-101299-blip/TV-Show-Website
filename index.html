@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things - Official Fan Site</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">STRANGER THINGS</div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+                <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+                <li><a href="#characters" onclick="scrollToSection('characters')">Characters</a></li>
+                <li><a href="#random" onclick="scrollToSection('random')">Quotes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <img src="images/show-banner.png" alt="Stranger Things Banner" class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">STRANGER THINGS</h1>
+            <p class="hero-tagline">A love letter to the supernatural classics of the 80's</p>
+        </div>
+    </section>
+
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About The Show</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="description">
+                        When a young boy disappears, his mother, a police chief and his friends must confront terrifying
+                        supernatural forces in order to get him back. Set in 1980s Indiana, the series combines
+                        childhood
+                        wonder and horror as the town faces threats from an alternate dimension known as the Upside
+                        Down.
+                    </p>
+                    <div class="show-info">
+                        <div class="info-item">
+                            <span class="info-label">Genre:</span>
+                            <span class="info-value">Sci-Fi, Horror, Drama</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Release Year:</span>
+                            <span class="info-value">2016</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Seasons:</span>
+                            <span class="info-value">4 (Season 5 Coming Soon)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Created By:</span>
+                            <span class="info-value">The Duffer Brothers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="characters" class="characters-section">
+        <div class="container">
+            <h2 class="section-title">Main Characters</h2>
+            <div id="characters-container" class="characters-grid">
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="random" class="random-section">
+        <div class="container">
+            <h2 class="section-title">Random Quote</h2>
+            <div class="quote-container">
+                <p id="random-quote" class="random-quote">"Click the button to see a random quote!"</p>
+                <p id="quote-character" class="quote-character"></p>
+                <button onclick="showRandomQuote()" class="quote-btn">Get Random Quote</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>
