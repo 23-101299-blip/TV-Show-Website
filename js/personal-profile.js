@@ -14,6 +14,13 @@ function loadPersonalProfile() {
 
     let user = JSON.parse(userData);
 
+    // Auto-update legacy data if found
+    if (user.name === "Student") {
+        user.name = "Ali Gameel";
+        user.email = "Netflixer";
+        localStorage.setItem("user", JSON.stringify(user));
+    }
+
     document.getElementById("profile-name").innerHTML = user.name;
     document.getElementById("profile-email").innerHTML = user.email;
 
