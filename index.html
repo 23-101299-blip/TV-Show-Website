@@ -15,6 +15,12 @@
 
 <body>
 
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h1 class="preloader-title">STRANGER THINGS</h1>
+            <div class="loader"></div>
+        </div>
+    </div>
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -23,7 +29,9 @@
                 <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
                 <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
                 <li><a href="#characters" onclick="scrollToSection('characters')">Characters</a></li>
+                <li><a href="#merch" onclick="scrollToSection('merch')">Merch</a></li>
                 <li><a href="#random" onclick="scrollToSection('random')">Quotes</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </div>
     </nav>
@@ -84,6 +92,19 @@
         </div>
     </section>
 
+    <section id="merch" class="merch-section">
+        <div class="container">
+            <h2 class="section-title">Official Merch</h2>
+            <div id="merch-container" class="merch-grid">
+            </div>
+            <div class="cart-section">
+                <h3 class="cart-title">Shopping Cart</h3>
+                <div id="cart-items" class="cart-items">
+                </div>
+                <p id="cart-message" class="cart-message"></p>
+            </div>
+        </div>
+    </section>
 
     <section id="random" class="random-section">
         <div class="container">
