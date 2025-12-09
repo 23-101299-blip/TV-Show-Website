@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Stranger Things</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h1 class="preloader-title">STRANGER THINGS</h1>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">STRANGER THINGS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Dashboard</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="personal-profile-section">
+        <div class="profile-container">
+            <h1 class="profile-page-title">Personal Profile</h1>
+
+            <div class="profile-card">
+                <div class="profile-header-section">
+                    <div class="profile-avatar">
+                        <div class="avatar-circle">
+                            <span id="user-initials" class="user-initials"></span>
+                        </div>
+                    </div>
+                    <div class="profile-main-info">
+                        <h2 id="profile-name" class="profile-display-name"></h2>
+                        <p id="profile-email" class="profile-email-text"></p>
+                    </div>
+                </div>
+
+                <div class="profile-details-section">
+                    <h3 class="section-heading">Account Information</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <span class="info-box-label">Member Since</span>
+                            <span class="info-box-value">December 2025</span>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-box-label">Status</span>
+                            <span class="info-box-value">Active</span>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-box-label">Role</span>
+                            <span class="info-box-value">Fan Member</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-activity">
+                    <h3 class="section-heading">Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <span class="activity-icon">🛒</span>
+                            <span class="activity-text">Added items to cart</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">👤</span>
+                            <span class="activity-text">Viewed character profiles</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">💬</span>
+                            <span class="activity-text">Generated random quotes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/personal-profile.js"></script>
+</body>
+
+</html>
